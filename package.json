@@ -1,0 +1,53 @@
+{
+  "name": "@gcxh/ol-esay",
+  "version": "0.3.4",
+  "description": "",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "example"
+  ],
+  "scripts": {
+    "dev": "rollup -w -c ./build/rollup.config.dev.js",
+    "build": "rollup -c ./build/rollup.config.prod.js",
+    "release": "standard-version"
+  },
+  "publishConfig": {
+    "registry": "http://114.116.245.116/repository/GCXH-NPM/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:SatImage2014/gcxh-js-ol-esay.git"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "ol": "6.4.3",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-transform-classes": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "rollup": "^2.16.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-livereload": "^1.3.0",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^3.1.2",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-terser": "^6.1.0",
+    "standard-version": "^9.3.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

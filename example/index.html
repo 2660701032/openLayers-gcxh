@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="./index.css"> -->
+  <script src="./index.js"></script>
+  <title>title</title>
+
+  <style>
+   .map{
+     width: 100%;
+     height: 500px;
+   }
+  </style>
+</head>
+
+<body>
+  <div class="map" id="map"></div>
+  
+</body>
+
+</html>
+<script>
+  const map = new JiLin_MapPlugins.MapPlugins(document.getElementById('map'), {
+    baseLayers: [ 'TiandituLayerVecW', 'TiandituLayerVcaW' ],
+    maxZoom: 16,
+    tiandituToken: '9df1e2d38f43b8983357c36603d366e5',
+  })
+
+  map.addArcGISLayer({
+    url: 'https://server.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}'
+  })
+</script>
